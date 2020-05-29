@@ -74,17 +74,20 @@ class Player {
                 // collision with another rectangle
                 if (direction === "y") {
                     if (this.velocityY > 0) {
+                        // falling down
                         this.y = ob.y - this.height;
+                        this.jumping = false;
                     } else {
+                        // jumping up
                         this.y = ob.y + ob.height;
                     }
                     this.velocityY = 0;
-                    this.jumping = false;
                 } else if (direction === "x") {
                     if (this.velocityX > 0) {
                         // we were running to the right
                         this.x = ob.x - this.width;
                     } else {
+                        // running to left
                         this.x = ob.x + ob.width;
                     }
                     this.velocityX = 0;
