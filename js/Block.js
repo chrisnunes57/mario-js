@@ -25,8 +25,9 @@ class Block {
         this.spriteY = sprite_positions[type][1];
     }
 
-    draw() {
-        this.ctx.drawImage(this.image, this.spriteX, this.spriteY, 16, 16, this.x, this.y, this.width, this.height);
+    draw(cameraOffset) {
+        
+        this.ctx.drawImage(this.image, this.spriteX, this.spriteY, 16, 16, this.x + cameraOffset[0], this.y + cameraOffset[1], this.width, this.height);
     }
 }
 

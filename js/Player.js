@@ -52,7 +52,7 @@ class Player {
         this.spriteY = this.spritePositions[this.spriteIndex][1];
     }
 
-    draw(obstacles=[], characters=[]) {
+    draw(cameraOffset, obstacles=[], characters=[]) {
 
         this.setSprite();
 
@@ -63,7 +63,7 @@ class Player {
         this.y += this.velocityY;
         this.checkCollisions(obstacles, characters, "y");
 
-        this.ctx.drawImage(this.reversed ? this.imageReversed : this.image, this.spriteX, this.spriteY, 120, 160, this.x, this.y, this.width, this.height);
+        this.ctx.drawImage(this.reversed ? this.imageReversed : this.image, this.spriteX, this.spriteY, 120, 160, this.x + cameraOffset[0], this.y + cameraOffset[1], this.width, this.height);
     }
 
     checkCollisions(obstacles, characters, direction) {
