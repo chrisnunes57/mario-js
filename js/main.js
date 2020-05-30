@@ -65,6 +65,7 @@ function gameLoop(newtime) {
         then = now - (elapsed % fpsInterval);
 
         cameraOffset[0] = Math.min(originalPlayerX - player.x, 0);
+        cameraOffset[1] = Math.max(originalPlayerY - player.y - 100, 0);
 
         // draw stuff here
         ctx.fillStyle = "#5C94FC";
