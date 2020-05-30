@@ -1,5 +1,6 @@
 const sprite_positions = {
-    "b": [0, 0] // base block
+    "b": [0, 0], // base block
+    "u": [48, 0] // used coin block
 }
 
 class Block {
