@@ -90,7 +90,7 @@ class Player {
                         // running to left
                         this.x = ob.x + ob.width;
                     }
-                    this.velocityX = 0;
+                    
                     this.running = false;
                 }
                 
